@@ -6,7 +6,7 @@ Servo transportServo;
 int numberOfTrays = 4;
 int holeAngle = 180 / (numberOfTrays + 1);
 int lockAngleOffset = 7;
-int transportAngleOffset = 9;
+int transportAngleOffset = 11;
 int servoDelay = 500;
 int lastLockPosition = 0;
 int lastTransportPosition = 0;
@@ -83,7 +83,8 @@ int servePillCommand(String command) {
   String currentCommand = command;
   while (currentCommand.indexOf(",") > -1) {
       int pos = currentCommand.substring(0, currentCommand.indexOf(",")).toInt();
-      currentCommand = currentCommand.substring(currentCommand.indexOf(",") + 1);
+      String newCommand = currentCommand.substring(currentCommand.indexOf(",") + 1);
+      currentCommand = newCommand;
       Serial.println(currentCommand);
       returnCode = servePill(pos);
   }
