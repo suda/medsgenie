@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!--
+Hi Yuri :)
+You can find sources for the whole thing at: https://github.com/suda/medsgenie
+-->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="static/img/icon-192.png">
+    <link rel="icon" sizes="128x128" href="static/img/icon-128.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="static/img/icon-128.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="static/img/icon-128.png">
+    <title>Hi Diana 🙃</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  </head>
+  <body ontouchstart="">
+    <div class="bg"></div>
+    <div id="buttons">
+      <a href="javascript:void(0);" data-index="0"><img src="static/img/red.gif" alt="Red"></a>
+      <a href="javascript:void(0);" data-index="1"><img src="static/img/orange.gif" alt="Orange"></a>
+      <a href="javascript:void(0);" data-index="2"><img src="static/img/yellow.gif" alt="Yellow"></a>
+      <a href="javascript:void(0);" data-index="3"><img src="static/img/green.gif" alt="Green"></a>
+    </div>
+
+    <div id="setup">
+      <div id="step-1" class="step">
+        <h1>Gato isn't online 😢</h1>
+        <p>What does the light on his tummy looks like?</p>
+
+        <h2><div class="device-dot blinking-green"></div> Blinking green</h2>
+        <p>
+          It's trying to connect to the internet. If it doesn't know the WiFi
+          password after couple of seconds it will switch to...
+        </p>
+
+        <h2><div class="device-dot blinking-blue"></div> Blinking blue</h2>
+        <p>
+          You need to tell him which WiFi network you want to use and what's
+          it's password:
+        </p>
+        <p>
+          <a href="javascript:void(0);" onclick="step2()" class="btn">Enter WiFi information</a>
+        </p>
+      </div>
+
+      <div id="step-2" class="step">
+        <h1>Connect to the Gato WiFi 💁🏼</h1>
+        <p>
+          When you go to the WiFi list you should see one named
+        </p>
+        <h3>diana-hi:)</h3>
+        <p>
+          Please connect to it and get back to this website 🙃
+        </p>
+      </div>
+
+      <div id="step-3" class="step">
+        <h1>Select WiFi 👇🏻</h1>
+        <ul></ul>
+      </div>
+
+      <div id="step-4" class="step">
+        <h1>Enter password 🙈</h1>
+        <input type="text" id="wifi-password" />
+        <p>
+          <a href="javascript:void(0);" onclick="step5()" class="btn">Connect</a>
+        </p>
+      </div>
+
+      <div id="step-5" class="step">
+        <h1>Waiting for Gato to connect...</h1>
+        <h1>🙏🏻</h1>
+        <p>If it doesn't after couple of seconds, refresh this page.</p>
+      </div>
+    </div>
+
+    <script src="static/js/softap-browser.js" charset="utf-8"></script>
+    <script src="static/js/index.js" charset="utf-8"></script>
+  </body>
+</html>
